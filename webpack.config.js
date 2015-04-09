@@ -36,7 +36,14 @@ module.exports = {
 
             {
                 test: /\.scss$/,
-                loader: 'style!css!sass'
+                loader: "style!css!sass?outputStyle=expanded&" +
+                    "includePaths[]=" + (path.resolve(__dirname, "./bower_components")) + "&" +
+                    "includePaths[]=" + (path.resolve(__dirname, "./node_modules"))
+            },
+
+            {
+                test: /\.woff|.ttf|.svg|.eot$/,
+                loader: 'url?limit=100000'
             }
 
         ]
