@@ -10,7 +10,7 @@ class Component extends React.Component {
 
     render() {
         return (
-            <h1>Hello React and Babel 1</h1>
+            <h1>Hello React and Babel</h1>
         );
     }
 
