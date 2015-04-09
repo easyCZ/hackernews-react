@@ -1,10 +1,19 @@
 'use strict';
 
+import React from 'react';
 
-module.exports = function () {
-    var element = document.createElement('h1');
+class Component extends React.Component {
 
-    element.innerHTML = 'Hello world';
+    constructor(props) {
+        super(props);
+    }
 
-    return element;
-};
+    render() {
+        return (
+            <h1>Hello React and Babel 1</h1>
+        );
+    }
+
+}
+
+export default Component;
