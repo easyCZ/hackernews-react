@@ -4,7 +4,8 @@
   "description": "A Hacker News reader in React JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
   },
   "repository": {
     "type": "git",
@@ -17,12 +18,10 @@
   },
   "homepage": "https://github.com/easyCZ/react-hackernews",
   "dependencies": {
-    "webpack": "^1.8.2"
+    "webpack": "^1.8.2",
+    "webpack-dev-server": "^1.8.0"
   },
   "devDependencies": {
     "html-webpack-plugin": "^1.1.0"
-  },
-  "scripts": {
-    "build": "webpack"
   }
 }
