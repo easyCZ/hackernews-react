@@ -1,5 +1,6 @@
-// @import '../bower_components/materialize/sass/materialize';
-
-body {
-    background-color: red;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }

@@ -10,7 +10,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js',
+        filename: 'bundle.js'
     },
 
     plugins: [
@@ -20,7 +20,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'app/index.html',
             title: 'Hacker News Reader - React JS'
-        })
+        }),
+        new webpack.optimize.UglifyJsPlugin()
 
     ],
 
