@@ -45,9 +45,9 @@ class ArticleList extends React.Component {
         });
 
         return (
-            <ul className="collection">
+            <div className="collection ArticleList">
                 {articles}
-            </ul>
+            </div>
         );
     }
 }

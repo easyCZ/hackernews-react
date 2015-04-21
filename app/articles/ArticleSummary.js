@@ -1,6 +1,8 @@
 import React from 'react';
 import ArticleStore from '../stores/ArticleStore';
 import ArticleActions from '../actions/ArticleActions';
+import ArticleSummaryTitle from './ArticleSummaryTitle';
+import ArticleSummaryStyle from './ArticleSummary.scss';
 
 
 class ArticleSummary extends React.Component {
@@ -13,22 +15,31 @@ class ArticleSummary extends React.Component {
             story => this.onStoryChange(story)
         );
 
-        // TODO: Ask for article detail to be loaded
         ArticleActions.loadStory(this.props.articleId);
     }
 
     onStoryChange() {
+        let story = ArticleStore.getStory(this.props.articleId);
+        console.log('story', story);
         this.setState({
-            story: ArticleStore.getStory(this.props.articleId)
+            story: story
         });
     }
 
     render() {
         if (this.state && this.state.story)
-            return (<li className="collection-item">{this.state.story.title}</li>);
+            return (
+                <a href={this.state.story.url} className="collection-item ArticleSummary">
+                    <ArticleSummaryTitle
+                        author={this.state.story.by}
+                        timestamp={this.state.story.time} />
+
+                    {this.state.story.title}
+                </a>
+            );
 
         return (
-            <li className="collection-item">Loading - {this.props.articleId}</li>
+            <span className="collection-item">Loading - {this.props.articleId}</span>
         );
 
     }

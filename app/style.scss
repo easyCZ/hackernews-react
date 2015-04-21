@@ -4,3 +4,13 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
