@@ -30,11 +30,12 @@ class ArticleSummary extends React.Component {
         if (this.state && this.state.story)
             return (
                 <a href={this.state.story.url} className="collection-item ArticleSummary">
+                  <h5>{this.state.story.title}</h5>
                     <ArticleSummaryTitle
                         author={this.state.story.by}
                         timestamp={this.state.story.time} />
 
-                    {this.state.story.title}
+
                 </a>
             );
 
@@ -47,4 +48,3 @@ class ArticleSummary extends React.Component {
 }
 
 export default ArticleSummary;
-
