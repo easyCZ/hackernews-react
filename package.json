@@ -30,6 +30,7 @@
   "devDependencies": {
     "babel-jest": "^5.0.1",
     "css-loader": "^0.9.1",
+    "eslint": "^1.2.1",
     "file-loader": "^0.8.1",
     "firebase": "^2.2.4",
     "flux": "^2.0.1",
