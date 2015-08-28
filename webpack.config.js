@@ -37,8 +37,7 @@ module.exports = {
 
             {
                 test: /\.scss$/,
-                loader: "style!css!sass?outputStyle=expanded&" +
-                    "includePaths[]=" + (path.resolve(__dirname, "./node_modules"))
+                loader: 'style!css!sass'
             },
 
             {

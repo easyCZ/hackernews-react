@@ -1,8 +1,7 @@
 import React from 'react';
 import ArticleStore from '../stores/ArticleStore';
 import ArticleActions from '../actions/ArticleActions';
-import ArticleSummaryTitle from './ArticleSummaryTitle';
-import ArticleSummaryStyle from './ArticleSummary.scss';
+import './ArticleSummary.scss';
 
 
 class ArticleSummary extends React.Component {
@@ -20,7 +19,6 @@ class ArticleSummary extends React.Component {
 
     onStoryChange() {
         let story = ArticleStore.getStory(this.props.articleId);
-        console.log('story', story);
         this.setState({
             story: story
         });
@@ -28,19 +26,14 @@ class ArticleSummary extends React.Component {
 
     render() {
         if (this.state && this.state.story)
-            return (
-                <a href={this.state.story.url} className="collection-item ArticleSummary">
-                  <h5>{this.state.story.title}</h5>
-                    <ArticleSummaryTitle
-                        author={this.state.story.by}
-                        timestamp={this.state.story.time} />
-
-
-                </a>
-            );
+          return (
+            <a href={this.state.story.url} className="mdl-grid ArticleSummary">
+              <div className="mdl-cell mdl-cell--12-col">{this.state.story.title}</div>
+            </a>
+          );
 
         return (
-            <span className="collection-item">Loading - {this.props.articleId}</span>
+          <span className="collection-item">Loading - {this.props.articleId}</span>
         );
 
     }

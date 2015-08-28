@@ -3,6 +3,7 @@ import ArticleStore from '../stores/ArticleStore';
 import AppDispatcher from '../AppDispatcher';
 import ArticleActions from '../actions/ArticleActions';
 import ArticleSummary from './ArticleSummary';
+import './ArticleList.scss';
 
 
 class ArticleList extends React.Component {
@@ -40,7 +41,6 @@ class ArticleList extends React.Component {
         let articles = this.state.articles.map((article, i) => {
             return (
                 <ArticleSummary articleId={article} />
-                // <div className="Article">{article}</div>
             );
         });
 
