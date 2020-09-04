@@ -23,7 +23,7 @@
     "babel-loader": "^5.0.0",
     "flux": "^2.0.1",
     "jsx-loader": "^0.13.1",
-    "react": "^0.13.1",
+    "react": "^16.13.1",
     "webpack": "^1.8.2",
     "webpack-dev-server": "^1.8.0"
   },
